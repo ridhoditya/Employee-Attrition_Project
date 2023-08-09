@@ -42,3 +42,28 @@ Memberikan pelatihan untuk meningkatkan kompetensi kaaryawan
 Membuka kesempatan bagi karyawan untuk meningkatkan jenjang karir disertai dengan kenaikan gaji sesuai pencapaiannya
 Mengadakan Outing untuk menjalin kerjasama dan membangun rasa kekeluargaan
 Membuat sebuah ajang lomba antar departemen untuk meningkatkan kekompakkan antar departemen
+_________________________________________________________
+## Stage 2
+SUMMARY PROJECT:
+
+1. Data Cleansing
+- Berdasarkan informasi data, maka dapat disimpulkan bahwa tidak terdapat missing value
+- Setelah melakukan pengecekan terhadap keseluruhan feature secara-Bersama-sama maka tidak terdapat data duplikat
+- Berdasarkan boxplot, maka terdapat beberapa outlier di beberapa feature sehingga kami menanganinya dengan mengaplikasikan metode Z-Score untuk menghilangkan outlier.
+- Feature transformation yang diterapkan adalah standarisasi, karena melihat distribusi masih ada beberapa feature yang tidak normal, sehingga kami menggunakan metode Standarisasi (Standarscaler) untuk melakukan scaling pada interval skala tertentu
+- Feature encoding yang kami terapkan ada 2, yaitu Label ecoding untuk feature : attrition, Gender, Mariatal Status dan Business Travel, sedangakn One-hot encoding diterapkan pada feature Departmen, EducationField dan Jobrole
+- Pada metode imbalance ini kami menerapkan metode oversampling untuk menghindari adanya informasi yang terbuang.
+2. Feature Engineering
+- Pada fase feature selection, kami mengeliminasi feature yang memiliki 1 nilai unik seperti standarhour, over18 dan juga Employeecount dan juga yang memiliki nilai unik sebanyak dataset yaitu Employeenummber, selain itu kami juga memeilih feature Performance rating karena dari visualisasi rasionya hampir sama sehingga kami putuskan tidak berdampak pada target.
+
+- Kami tidak melakukan feature extraction karena dirasa feature yang sudah ada saat ini sudah cukup memberikan informasi yang akan mempengaruhi target.
+
+- Feature tambahan:
+
+- OvertimeRatio: Fitur ini dapat dihitung dengan membagi jumlah jam kerja lembur (overtime) per bulan oleh 'TotalWorkingYears'. Fitur ini akan mencerminkan sejauh mana karyawan cenderung bekerja lembur dibandingkan dengan pengalaman kerja mereka.
+
+- PromotionSpeed: Fitur ini dapat dihitung dengan membagi 'YearsSinceLastPromotion' oleh 'TotalWorkingYears’.
+
+- EmployeeTenure: Fitur ini dapat dihitung berdasarkan selisih antara 'YearsInCurrentRole' dan 'YearsAtCompany'. Fitur ini akan menunjukkan berapa lama seorang karyawan telah bekerja di perusahaan saat ini dalam peran yang sedang dijalani.
+
+- JobStabilityIndex: Fitur ini dapat dihitung dengan menggabungkan 'YearsAtCompany', 'YearsInCurrentRole', dan 'YearsSinceLastPromotion'. Fitur ini akan mencerminkan stabilitas pekerjaan dan kesempatan untuk promosi dalam perusahaan
