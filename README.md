@@ -49,7 +49,7 @@ After careful consideration, the decision has been made that the most optimal mo
 ### Evaluation Metric
 ![image](https://github.com/ridhoditya/T3chS3nse/assets/139097412/5b5428c7-5f9e-44d4-a1d7-4ed55f9d5196)
 
-##Business Simulation
+## Business Simulation
 A decrease in the attrition rate has been observed.
 ![image](https://github.com/ridhoditya/T3chS3nse/assets/139097412/cda8f93b-f70d-40c5-9f0a-6d3ffdab3128)
 
